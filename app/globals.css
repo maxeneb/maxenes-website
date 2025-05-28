@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  --sage-light: #B6D48C;
+  --sage-dark: #677954;
+  --sage-medium: #AAB796;
+  --cream: #FEFCEF;
+}
+
+* {
+  font-family: Outfit;
+}
+
+.bg-sage-light { background-color: var(--sage-light); }
+.bg-sage-dark { background-color: var(--sage-dark); }
+.bg-sage-medium { background-color: var(--sage-medium); }
+.bg-cream { background-color: var(--cream); }
+
+.text-sage-light { color: var(--sage-light); }
+.text-sage-dark { color: var(--sage-dark); }
+.text-sage-medium { color: var(--sage-medium); }
+.text-cream { color: var(--cream); }
+
+.border-sage-medium { border-color: var(--sage-medium); }
+
+.hover\:bg-sage-dark:hover {
+  background-color: var(--sage-dark);
+}
+.hover\:bg-sage-medium:hover {
+  background-color: var(--sage-medium);
+}
+.hover\:text-sage-dark:hover {
+  color: var(--sage-dark);
+}
+.hover\:text-cream:hover {
+  color: var(--cream);
+}
