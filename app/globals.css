@@ -5,16 +5,26 @@
   --sage-dark: #677954;
   --sage-medium: #AAB796;
   --cream: #FEFCEF;
+  --background: #f2faf3;
+}
+
+.dark {
+  --sage-light: #677954;
+  --sage-dark: #B6D48C;
+  --sage-medium: #8B9A7A;
+  --cream: #2c2a2a;
+  --background: #424743;
 }
 
 * {
-  font-family: Outfit;
+  font-family: Inter;
 }
 
 .bg-sage-light { background-color: var(--sage-light); }
 .bg-sage-dark { background-color: var(--sage-dark); }
 .bg-sage-medium { background-color: var(--sage-medium); }
 .bg-cream { background-color: var(--cream); }
+.bg-background { background-color: var(--background); }
 
 .text-sage-light { color: var(--sage-light); }
 .text-sage-dark { color: var(--sage-dark); }
@@ -22,6 +32,7 @@
 .text-cream { color: var(--cream); }
 
 .border-sage-medium { border-color: var(--sage-medium); }
+.border-sage-light { border-color: var(--sage-light); }
 
 .hover\:bg-sage-dark:hover {
   background-color: var(--sage-dark);

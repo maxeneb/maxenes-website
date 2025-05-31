@@ -1,7 +1,10 @@
-import { Outfit, Ovo } from "next/font/google";
+import { Inter, Ovo } from "next/font/google";
 import "./globals.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Providers from "./Providers";
 
-const outfit = Outfit({
+const inter = Inter({
   subsets: ["latin"], weight: ["400", "500", "600", "700"]
 });
 
@@ -18,9 +21,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${outfit.className} ${ovo.className} antialiased`}
+        className={`${inter.className} ${ovo.className} antialiased bg-background transition-colors duration-300`}
       >
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );

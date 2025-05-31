@@ -1,6 +1,8 @@
 import HeaderIcons from "./HeaderIcons";
 import Navigation from "./Navigation";
 import HomePage from "./home/HomePage";
+import AboutPage from "./about/AboutPage";
+import WorkPage from "./work/WorkPage";
 import { useState } from 'react';
 
 const PortfolioCard = () => {
@@ -22,8 +24,8 @@ const PortfolioCard = () => {
   };
 
   return (
-    <div className="h-[calc(100vh-150px)] flex items-center justify-center p-8 ">
-      <div className="rounded-2xl shadow-lg border border-sage-medium max-w-3xl w-full">
+    <div className="flex items-center justify-center p-8 ">
+      <div className="rounded-2xl shadow-lg border-2 border-sage-medium max-w-3xl ">
         
         <div className="bg-sage-light flex justify-between items-center p-4 rounded-t-2xl">
           <Navigation activeTab={activeTab} setActiveTab={setActiveTab} />

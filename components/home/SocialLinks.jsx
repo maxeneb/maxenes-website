@@ -3,10 +3,10 @@ import { playClickSound } from '../../utils/playClickSound';
 
 const SocialLinks = () => {
   const socialLinks = [
-    { name: 'GitHub', icon: Github, url: '#' },
-    { name: 'LinkedIn', icon: Linkedin, url: '#' },
-    { name: 'Behance', icon: Globe, url: '#' },
-    { name: 'Facebook', icon: Facebook, url: '#' },
+    { name: 'GitHub', icon: Github, url: 'https://github.com/maxeneb' },
+    { name: 'LinkedIn', icon: Linkedin, url: 'https://www.linkedin.com/in/maxene-borces/' },
+    { name: 'Behance', icon: Globe, url: 'https://www.behance.net/maxenenborces' },
+    { name: 'Facebook', icon: Facebook, url: 'https://www.facebook.com/chimforkookie/' },
   ];
 
   return (
