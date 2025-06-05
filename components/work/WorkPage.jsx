@@ -4,14 +4,18 @@ import SimpleSlider from "./Slider";
 
 const WorkPage = () => {
   return (
-    <div className="w-full">
-      <div className="text-center mb-6">
-        <h2 className="text-2xl font-bold text-sage-dark mb-2">
+    <div className="flex items-center justify-center flex-col gap-4">
+      <div className="text-center mb-4 md:mb-6 px-4 md:px-0">
+        <h2 className="text-xl md:text-2xl font-bold text-sage-dark mb-2">
           Projects
         </h2>
-        <p className="text-sage-dark text-base">A showcase of my recent work and creative solutions</p>
+        <p className="text-sage-dark text-sm md:text-base leading-relaxed">
+          A showcase of my recent work and creative solutions
+        </p>
       </div>
-      <SimpleSlider />
+      <div className="w-full px-4 md:px-0">
+        <SimpleSlider />
+      </div>
     </div>
   );
 };

@@ -24,15 +24,15 @@ const PortfolioCard = () => {
   };
 
   return (
-    <div className="flex items-center justify-center p-8 ">
-      <div className="rounded-2xl shadow-lg border-2 border-sage-medium max-w-3xl ">
+    <div className="flex items-center justify-center p-4 md:p-8">
+      <div className="rounded-2xl shadow-lg border-2 border-sage-medium w-full max-w-3xl">
         
-        <div className="bg-sage-light flex justify-between items-center p-4 rounded-t-2xl">
+        <div className="bg-sage-light flex justify-between items-center p-3 md:p-4 rounded-t-2xl">
           <Navigation activeTab={activeTab} setActiveTab={setActiveTab} />
           <HeaderIcons />
         </div>
 
-        <div className="bg-cream p-8 rounded-b-2xl">
+        <div className="bg-cream p-4 md:p-8 rounded-b-2xl">
           {renderTabContent()}
         </div>
 
