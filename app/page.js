@@ -6,6 +6,7 @@ import { useDarkMode } from "./contexts/DarkModeContext";
 import FallingLeaves from "../components/ui/FallingLeaves";
 import BackgroundMusic from "../components/ui/BackgroundMusic";
 import Script from "next/script";
+import BotpressChatbot from "../components/ui/BotpressChatbot";
 
 export default function Home() {
   const { isDarkMode } = useDarkMode();
@@ -16,17 +17,6 @@ export default function Home() {
 
   return (
     <>
-      <Script
-        src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"
-        strategy="afterInteractive"
-        onLoad={() => console.log('Botpress inject script loaded')}
-      />
-      <Script
-        src="https://files.bpcontent.cloud/2025/06/10/16/20250610164636-V67XPJH7.js"
-        strategy="afterInteractive"
-        onLoad={() => console.log('Botpress bot script loaded')}
-      />
-
       <ClickSpark
         sparkColor="#fff"
         sparkSize={10}
@@ -35,11 +25,10 @@ export default function Home() {
         duration={400}
       >
         <main
-          className="h-screen transition-colors duration-300 bg-cover bg-center bg-no-repeat"
+          className="min-h-screen w-full transition-colors duration-300 bg-cover bg-center bg-no-repeat relative"
           style={{ backgroundImage: `url('${backgroundImage}')` }}
         >
           <BackgroundMusic
-            src="./sounds/bg-music.mp3"
             volume={0.5}
             autoPlay={true}
             showControls={true}
@@ -47,14 +36,14 @@ export default function Home() {
           <FallingLeaves
             numLeaves={15}
             windMaxSpeed={5}
-            lightLeafImage="images/leaf.svg"
-            darkLeafImage="images/leaf-night.svg"
             isDarkMode={isDarkMode}
           />
           <Header />
           <PortfolioCard />
           
-          <div className="absolute bottom-0 w-full"></div>
+          <div className="fixed bottom-4 right-4 z-50">
+            <BotpressChatbot />
+          </div>
         </main>
       </ClickSpark>
     </>

@@ -1,9 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
-import { ChevronLeft, ChevronRight, Github } from "lucide-react";
+import { ChevronLeft, ChevronRight, Link, Github } from "lucide-react";
 import { playClickSoundLow } from '../../utils/playClickSound';
 
 const ProjectSlider = () => {
+
   function NextArrow({ onClick }) {
     return (
       <button
@@ -63,42 +64,45 @@ const ProjectSlider = () => {
     {
       id: 1,
       title: "TopIT",
-      category: "Web Development, Adaptive Testing, Retrieval Augmented Generation, Difficulty Estimation",
+      category: "Web Development, Adaptive Testing, Content Balancing, Retrieval Augmented Generation",
       description:
-        "A smart review platform designed to assist students through personalized content delivery, which dynamically selects questions based on the student's ability level.",
-      tech: ["React", "Laravel", "Inertia.js", "FastAPI", "MySQL"],
+        "A smart review platform designed to assist students through personalized content delivery, which dynamically selects questions based on the student's ability level using 2-parameter logistic model achieving 0.29 Standard Error of Measurement.",
+      tech: ["React", "Laravel", "Inertia.js", "FastAPI", "MySQL", "Docker"],
       image:
         "./images/work-topit.jpg",
       githubUrl: "https://github.com/maxeneb/TopIT-Inertia-React",
+      otherUrl: "https://drive.google.com/file/d/1ZFeokFV7XNo1v1gxT4N94vyEsyhv8pje/view?usp=sharing"
     },
     {
       id: 2,
       title: "SpeakUp",
-      category: "Hackathon (won 2nd Runner Up), Web and Mobile Development",
+      category: "Web Development, Mobile Development, Speech Recognition",
       description:
-        "Designed to support children with speech delay by offering a personalized approach to speech therapy, guiding children through exercises that help them pronounce specific words correctly.",
+        "Developed the front-end of the web-app that supports children with speech delays for Hackathon which we won 2nd Runner Up. This is designed to provide a tailored approach to speech therapy through word pronunciation exercises.",
       tech: ["Angular", "Laravel", "MySQL", "Flutter"],
       image:
         "./images/work-speakup.jpg",
-      githubUrl: "#",
+      githubUrl: "https://www.behance.net/gallery/196543951/SpeakUp-Web-Mobile-Based-Application",
+      otherUrl: "https://www.canva.com/design/DAGCx4Jnx0k/IhwFb7V-sEO-4M7Nc9e2Qg/edit?utm_content=DAGCx4Jnx0k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
     },
     {
       id: 3,
       title: "DigiAI",
       category: "Graphics and Visual Computing, Web Development, Web Scraping, Transfer Learning",
       description:
-        "This personal project addresses the need for assessing and certifying AI-generated artworks, which face issues concerning authenticity and authorship achieving 92% accuracy.",
+        "Leveraged transfer learning with MobileNetV2 to build an AI artwork classifier model, achieving 91.7% accuracy and integrated it in a full-stack web application. Dataset is scraped from art-focused SubReddits. ",
       tech: ["Django REST", "Angular", "MySQL", "TensorFlow"],
       image:
-        "./images/work-digiai.jpg",
+        "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       githubUrl: "https://github.com/maxeneb/DigiAI-Django",
+      otherUrl: "https://github.com/maxeneb/DigiAI-Angular"
     },
     {
       id: 4,
       title: "BizExpense",
-      category: "Web Development, MVC",
+      category: "Project Management, Agile, Web Development, Model-View-Controller",
       description:
-        "An expense tracker app developed during JumpStart program. Users can CRUD expenses and categorize them, view data from dashboard, do report analysis, and configure profile.",
+        "Developed a full-stack expense tracker app as part of the JumpStart program. I was responsible for the Expense Management module, implementing complete CRUD, filter by date-range and categories, and other features to meet the user requirements given.",
       tech: ["C#", "ASP.Net", "HTML/CSS", "JavaScript"],
       image:
         "./images/work-bizexpense.jpg",
@@ -109,10 +113,10 @@ const ProjectSlider = () => {
       title: "University Management System",
       category: "Web Development",
       description:
-        "This is a project from our class wherein we're provided a database offered by the university. Our task is to create a system that uses CRUD to students, colleges, and programs with these entities related to one another.",
+        "Developed a relational CRUD-based university management system in vanilla PHP to handle student, college, and program records from the database given by the department. Implemented entity relationships and user operations without relying on any frameworks. ",
       tech: ["PHP", "HTML/CSS", "JavaScript"],
       image:
-        "./images/work-univ.jpg",
+        "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       githubUrl: "https://github.com/maxeneb/University-Management-System",
     },
     {
@@ -120,11 +124,11 @@ const ProjectSlider = () => {
       title: "NotiFire",
       category: "Human and Computer Interaction, UI/UX Design, Mobile Case Study",
       description:
-        "A fire emergency app that addresses designed to provide a reliable and immediate alert system with just a single tap, ensuring quicker response times from firefighters.",
+        "A mobile case study focused on UI/UX design for a fire emergency app, featuring a one-tap alert system to ensure faster firefighter response. I was responsible for layout organization, color harmony, and overall user experience design.",
       tech: ["Figma"],
       image:
         "./images/work-notifire.jpg",
-      githubUrl: "https://www.figma.com/proto/AueDAwpFR27yAsp5oNEp7Z/NotiFire?type=design&node-id=118-245&t=igtiD9k1VnhTOb6q-1&scaling=scale-down&page-id=115%253A8&starting-point-node-id=118%253A245",
+      otherUrl: "https://www.figma.com/proto/AueDAwpFR27yAsp5oNEp7Z/NotiFire?type=design&node-id=118-245&t=igtiD9k1VnhTOb6q-1&scaling=scale-down&page-id=115%253A8&starting-point-node-id=118%253A245",
     },
   ];
 
@@ -141,6 +145,19 @@ const ProjectSlider = () => {
           .slick-list {
             border-radius: 1rem;
           }
+        }
+
+        .slick-slide > div {
+          height: 100%;
+        }
+
+        .slick-track {
+          display: flex;
+          align-items: stretch;
+        }
+
+        .slick-slide {
+          height: auto;
         }
 
         .custom-dots {
@@ -189,16 +206,16 @@ const ProjectSlider = () => {
 
       <Slider {...settings}>
         {projects.map((project, index) => (
-          <div key={project.id}>
-            <div className="flex flex-col md:grid md:grid-cols-2 bg-cream min-h-[400px] md:min-h-[450px]">
+          <div key={project.id} className="h-full">
+            <div className="flex flex-col md:grid md:grid-cols-2 bg-cream min-h-[400px] md:min-h-[450px] h-full">
               {/* Image Section */}
-              <div className="relative h-48 md:h-auto">
+              <div className="relative h-48 md:h-full">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover opacity-90"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-sage-dark/60 to-sage-light/10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-500/60 to-gray-400/10" />
 
                 {/* Slide Number */}
                 <div className="absolute bottom-2 left-2 md:bottom-4 md:left-4 z-30">
@@ -207,22 +224,35 @@ const ProjectSlider = () => {
                   </span>
                 </div>
 
-                {/* Github Link - moved to image section for mobile */}
+                {/* Github Link */}
                 <div className="absolute top-2 right-2 md:top-4 md:right-4 flex gap-2 z-30">
-                  <a
-                    href={project.githubUrl} 
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-1.5 md:p-2 bg-sage-medium text-cream hover:bg-sage-dark transition duration-200 hover:scale-110 border border-sage-medium rounded-full"
-                    title="View Code"
-                  >
-                    <Github size={16} className="md:w-[18px] md:h-[18px]" />
-                  </a>
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-1.5 md:p-2 bg-sage-medium text-cream hover:bg-sage-dark transition duration-200 hover:scale-110 border border-sage-medium rounded-full"
+                      title="View Code"
+                    >
+                      <Github size={16} className="md:w-[18px] md:h-[18px]" />
+                    </a>
+                  )}
+                  {project.otherUrl && (
+                    <a
+                      href={project.otherUrl} 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-1.5 md:p-2 bg-sage-medium text-cream hover:bg-sage-dark transition duration-200 hover:scale-110 border border-sage-medium rounded-full"
+                      title="More Details"
+                    >
+                      <Link size={16} className="md:w-[18px] md:h-[18px]" />
+                    </a>
+                  )}
                 </div>
               </div>
 
               {/* Content Section */}
-              <div className="p-4 md:p-6 lg:p-10 flex flex-col justify-center relative">
+              <div className="p-4 md:p-6 lg:p-10 flex flex-col justify-center relative h-full">
                 <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-center md:text-start text-sage-dark mb-10 md:mb-3">
                   {project.title}
                 </h3>

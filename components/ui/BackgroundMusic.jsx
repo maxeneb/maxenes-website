@@ -4,7 +4,7 @@ import { playClickSound } from '../../utils/playClickSound';
 
 const BackgroundMusic = ({ 
   src, 
-  volume = 0.3, 
+  volume = 0.5, 
   autoPlay = true,
   className = "",
   showControls = true 

@@ -8,7 +8,7 @@ const Profile = () => {
       {/* <Avatar /> */}
       <div className="flex-1 text-center">
         <h1 className="flex items-center justify-center text-3xl pb-3 md:text-5xl font-bold text-sage-dark mb-3 md:pt-18">
-          hi! i'm <span className="text-sage-medium px-2">max</span> ⋆˙⟡
+          hi! i'm <span className="text-sage-medium px-2 hover:duration-300 hover:scale-105">max</span> ⋆˙⟡
         </h1>
 
         <p className="text-sage-dark text-base pb-3 d:text-lg leading-relaxed">
