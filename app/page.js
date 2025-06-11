@@ -11,8 +11,8 @@ export default function Home() {
   const { isDarkMode } = useDarkMode();
 
   const backgroundImage = isDarkMode
-    ? "/images/bg-night.png"
-    : "/images/bg2-day.jpg";
+    ? "./images/bg-night.png"
+    : "./images/bg2-day.jpg";
 
   return (
     <>

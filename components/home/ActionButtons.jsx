@@ -24,7 +24,7 @@ const ActionButtons = () => {
       </button>
 
       <a
-        href="/maxeneborces-resume.pdf"
+        href="./maxeneborces-resume.pdf"
         download
         onClick={handleResumeClick}
         className="cursor-pointer border border-sage-medium text-sage-dark px-4 py-2 rounded-md text-sm flex items-center gap-1 transition-all duration-300 hover:scale-105"

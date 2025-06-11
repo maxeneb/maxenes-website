@@ -68,7 +68,7 @@ const ProjectSlider = () => {
         "A smart review platform designed to assist students through personalized content delivery, which dynamically selects questions based on the student's ability level.",
       tech: ["React", "Laravel", "Inertia.js", "FastAPI", "MySQL"],
       image:
-        "/images/work-topit.jpg",
+        "./images/work-topit.jpg",
       githubUrl: "https://github.com/maxeneb/TopIT-Inertia-React",
     },
     {
@@ -79,7 +79,7 @@ const ProjectSlider = () => {
         "Designed to support children with speech delay by offering a personalized approach to speech therapy, guiding children through exercises that help them pronounce specific words correctly.",
       tech: ["Angular", "Laravel", "MySQL", "Flutter"],
       image:
-        "/images/work-speakup.jpg",
+        "./images/work-speakup.jpg",
       githubUrl: "#",
     },
     {
@@ -90,7 +90,7 @@ const ProjectSlider = () => {
         "This personal project addresses the need for assessing and certifying AI-generated artworks, which face issues concerning authenticity and authorship achieving 92% accuracy.",
       tech: ["Django REST", "Angular", "MySQL", "TensorFlow"],
       image:
-        "/images/work-digiai.jpg",
+        "./images/work-digiai.jpg",
       githubUrl: "https://github.com/maxeneb/DigiAI-Django",
     },
     {
@@ -101,7 +101,7 @@ const ProjectSlider = () => {
         "An expense tracker app developed during JumpStart program. Users can CRUD expenses and categorize them, view data from dashboard, do report analysis, and configure profile.",
       tech: ["C#", "ASP.Net", "HTML/CSS", "JavaScript"],
       image:
-        "images/work-bizexpense.jpg",
+        "./images/work-bizexpense.jpg",
       githubUrl: "https://github.com/maxeneb/BizExpense",
     },
     {
@@ -112,7 +112,7 @@ const ProjectSlider = () => {
         "This is a project from our class wherein we're provided a database offered by the university. Our task is to create a system that uses CRUD to students, colleges, and programs with these entities related to one another.",
       tech: ["PHP", "HTML/CSS", "JavaScript"],
       image:
-        "images/work-univ.jpg",
+        "./images/work-univ.jpg",
       githubUrl: "https://github.com/maxeneb/University-Management-System",
     },
     {
@@ -123,7 +123,7 @@ const ProjectSlider = () => {
         "A fire emergency app that addresses designed to provide a reliable and immediate alert system with just a single tap, ensuring quicker response times from firefighters.",
       tech: ["Figma"],
       image:
-        "images/work-notifire.jpg",
+        "./images/work-notifire.jpg",
       githubUrl: "https://www.figma.com/proto/AueDAwpFR27yAsp5oNEp7Z/NotiFire?type=design&node-id=118-245&t=igtiD9k1VnhTOb6q-1&scaling=scale-down&page-id=115%253A8&starting-point-node-id=118%253A245",
     },
   ];
