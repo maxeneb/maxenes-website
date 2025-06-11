@@ -1,20 +1,17 @@
-import { playClickSound, playClickSoundLow } from '../utils/playClickSound';
+import { playSparkle } from '../utils/playClickSound';
 import { Moon, Music, Sun, Volume2, VolumeX } from 'lucide-react';
 import { useDarkMode } from '../app/contexts/DarkModeContext';
-import { useAudio } from '../app/contexts/AudioContext';
 
 const HeaderIcons = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
-  const { isMuted, toggleMute } = useAudio();
 
   const handleDarkModeToggle = () => {
-    playClickSoundLow(isMuted);
+    playSparkle();
     toggleDarkMode();
   };
-  const handleMuteToggle = () => {
-    playClickSound(isMuted);     
-    toggleMute();
-  };
+  // const handleMuteToggle = () => {
+  //   playClickSound();     
+  // };
 
   return (
     <div className="flex gap-3">
@@ -31,7 +28,7 @@ const HeaderIcons = () => {
           className="text-sage-dark hover:text-cream cursor-pointer transition-all duration-300 hover:scale-115" 
         />
       )}
-      {isMuted ? (
+      {/* {isMuted ? (
         <VolumeX 
           onClick={handleMuteToggle}
           size={24} 
@@ -43,7 +40,7 @@ const HeaderIcons = () => {
           size={24} 
           className="text-sage-dark hover:text-cream cursor-pointer transition-all duration-300 hover:scale-115" 
         />
-      )}
+      )} */}
     </div>
   );
 };

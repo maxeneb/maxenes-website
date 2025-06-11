@@ -1,12 +1,16 @@
 import React from "react";
 import Slider from "react-slick";
 import { ChevronLeft, ChevronRight, Github } from "lucide-react";
+import { playClickSoundLow } from '../../utils/playClickSound';
 
 const ProjectSlider = () => {
   function NextArrow({ onClick }) {
     return (
       <button
-        onClick={onClick}
+        onClick={() => {
+            onClick(),
+            playClickSoundLow()}
+          }
         className="cursor-pointer absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-10 p-1.5 md:p-2 bg-sage-dark/20 text-sage-dark hover:bg-sage-medium hover:text-cream border border-sage-medium rounded-full backdrop-blur-sm transition duration-200 hover:scale-110"
       >
         <ChevronRight size={16} className="md:w-5 md:h-5" />
@@ -17,7 +21,10 @@ const ProjectSlider = () => {
   function PrevArrow({ onClick }) {
     return (
       <button
-        onClick={onClick}
+        onClick={() => {
+            onClick(),
+            playClickSoundLow()}
+          }
         className="cursor-pointer absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 p-1.5 md:p-2 bg-sage-dark/20 text-sage-light hover:bg-sage-medium hover:text-cream border border-sage-medium rounded-full backdrop-blur-sm transition duration-200 hover:scale-110"
       >
         <ChevronLeft size={16} className="md:w-5 md:h-5" />
@@ -154,7 +161,7 @@ const ProjectSlider = () => {
           width: 8px;
           height: 8px;
           border-radius: 50%;
-          background: var(--sage-medium);
+          background: var(--cream);
           opacity: 0.6;
           border: none;
           transition: all 0.3s ease;

@@ -1,10 +1,10 @@
 import React from 'react'
-import Avatar from '../home/Avatar'
+import Avatar from './Avatar'
 import Cards from './Cards'
 
 const AboutMe = () => {
   return (
-      <div className='md:space-y-6 flex flex-col md:flex-row gap-7 md:gap-8 items-center md:items-start mb-6 md:mb-8 md:mt-6'>
+      <div className='md:space-y-6 flex flex-col mt-5 md:flex-row gap-7 md:gap-8 items-center md:items-start mb-6 md:mb-8 md:mt-14'>
         <Avatar />
         
         <div className='flex-1 text-center md:text-left'>

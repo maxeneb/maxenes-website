@@ -12,12 +12,12 @@ const PortfolioCard = () => {
     switch (activeTab) {
       case 'home':
         return <HomePage />;
-      case 'about':
+      case 'about me':
         return <AboutPage />;
-      case 'work':
+      case 'my works':
         return <WorkPage />;
-      case 'contact':
-        return <ContactPage />;
+      // case 'contact':
+      //   return <ContactPage />;
       default:
         return <HomePage />;
     }
@@ -32,7 +32,7 @@ const PortfolioCard = () => {
           <HeaderIcons />
         </div>
 
-        <div className="bg-cream p-4 md:p-8 rounded-b-2xl">
+        <div className="bg-gradient-cream-sage p-4 md:p-8 rounded-b-2xl">
           {renderTabContent()}
         </div>
 

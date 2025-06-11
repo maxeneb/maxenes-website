@@ -1,9 +1,7 @@
 import { playClickSound } from '../utils/playClickSound';
-import { useAudio } from '../app/contexts/AudioContext';
 
 const Navigation = ({ activeTab, setActiveTab }) => {
-  const { isMuted } = useAudio();
-  const navItems = ['home', 'about', 'work', 'contact'];
+  const navItems = ['home', 'about me', 'my works'];
 
   return (
     <nav className="flex gap-3">
@@ -11,7 +9,7 @@ const Navigation = ({ activeTab, setActiveTab }) => {
         <button
           key={item}
           onClick={() => {
-            playClickSound(isMuted),
+            playClickSound(),
             setActiveTab(item)}
           }
           className={`px-3 py-2 text-sm rounded-md transition-colors ${

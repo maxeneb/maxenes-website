@@ -4,7 +4,7 @@ import SimpleSlider from "./Slider";
 
 const WorkPage = () => {
   return (
-    <div className="flex items-center justify-center flex-col gap-4">
+    <div className="flex items-center justify-center flex-col gap-4 mt-5">
       <div className="text-center mb-4 md:mb-6 px-4 md:px-0">
         <h2 className="text-xl md:text-2xl font-bold text-sage-dark mb-2">
           Projects

@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --sage-light: #B6D48C;
-  --sage-dark: #677954;
-  --sage-medium: #AAB796;
-  --cream: #FEFCEF;
-  --background: #f2faf3;
+  --sage-light: #AECA85;
+  --sage-dark: #3A462E;
+  --sage-medium: #768E52;
+  --cream: #F2F2E5;
+  --background: #F2F2E5;
+  --title: #768E52;
 }
 
 .dark {
@@ -19,6 +20,21 @@
 * {
   font-family: Inter;
 }
+.bg-gradient-cream-sage {
+  background-image: linear-gradient(
+    to bottom,
+    var(--cream),
+    rgba(187, 189, 149, 0.5) 
+  );
+}
+.bg-gradient-cream-sage-card {
+  background-image: linear-gradient(
+    to bottom,
+    var(--cream),
+    rgba(187, 189, 149, 0.6) 
+  );
+}
+
 
 .bg-sage-light { background-color: var(--sage-light); }
 .bg-sage-dark { background-color: var(--sage-dark); }
@@ -33,6 +49,7 @@
 
 .border-sage-medium { border-color: var(--sage-medium); }
 .border-sage-light { border-color: var(--sage-light); }
+.border-sage-dark { border-color: var(--sage-dark);}
 
 .hover\:bg-sage-dark:hover {
   background-color: var(--sage-dark);
