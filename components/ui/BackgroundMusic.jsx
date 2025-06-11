@@ -1,10 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Volume2, VolumeX, Play, Pause } from 'lucide-react';
+import { playClickSound } from '../../utils/playClickSound';
 
 const BackgroundMusic = ({ 
   src, 
   volume = 0.3, 
-  autoPlay = false,
+  autoPlay = true,
   className = "",
   showControls = true 
 }) => {
@@ -30,12 +31,10 @@ const BackgroundMusic = ({
           })
           .catch(error => {
             console.log("Auto-play was prevented:", error);
-            // Auto-play was prevented, user needs to interact first
           });
       }
     }
 
-    // Clean up on unmount
     return () => {
       if (audio) {
         audio.pause();
@@ -111,7 +110,10 @@ const BackgroundMusic = ({
       {/* Mobile Layout - Only Play/Pause Button */}
       <div className="flex items-center gap-3 md:hidden p-2">
         <button
-          onClick={togglePlay}
+          onClick={() => {
+                      togglePlay(),
+                      playClickSound()}
+                    }
           className="cursor-pointer p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
           aria-label={isPlaying ? 'Pause music' : 'Play music'}
         >
@@ -127,7 +129,10 @@ const BackgroundMusic = ({
       <div className="hidden md:flex items-center gap-3 p-3">
         {/* Play/Pause Button */}
         <button
-          onClick={togglePlay}
+          onClick={() => {
+                      togglePlay(),
+                      playClickSound()}
+                    }
           className="cursor-pointer p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
           aria-label={isPlaying ? 'Pause music' : 'Play music'}
         >
@@ -140,7 +145,10 @@ const BackgroundMusic = ({
 
         {/* Mute Button */}
         <button
-          onClick={toggleMute}
+          onClick={() => {
+                      toggleMute(),
+                      playClickSound()}
+                    }
           className="cursor-pointer p-2 rounded-full bg-white/20 hover:bg-white/30 transition-colors"
           aria-label={isMuted ? 'Unmute' : 'Mute'}
         >

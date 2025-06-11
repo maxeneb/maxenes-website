@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <>
-      <Script
+      {/* <Script
         src="https://cdn.botpress.cloud/webchat/v3.0/inject.js"
         strategy="afterInteractive"
         onLoad={() => console.log('Botpress inject script loaded')}
@@ -25,7 +25,7 @@ export default function Home() {
         src="https://files.bpcontent.cloud/2025/06/10/16/20250610164636-V67XPJH7.js"
         strategy="afterInteractive"
         onLoad={() => console.log('Botpress bot script loaded')}
-      />
+      /> */}
 
       <ClickSpark
         sparkColor="#fff"
@@ -39,7 +39,7 @@ export default function Home() {
           style={{ backgroundImage: `url('${backgroundImage}')` }}
         >
           <BackgroundMusic
-            src="sounds/bg-music.mp3"
+            src="./sounds/bg-music.mp3"
             volume={0.5}
             autoPlay={true}
             showControls={true}
@@ -53,6 +53,7 @@ export default function Home() {
           />
           <Header />
           <PortfolioCard />
+          
           <div className="absolute bottom-0 w-full"></div>
         </main>
       </ClickSpark>
